@@ -22,7 +22,8 @@
     }
     
     #search {
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         height: 40px;
         font-size: 16px;
   border-radius: 5px;
@@ -34,21 +35,92 @@
     }
 
     .white-background {
-        background-color: white;
-        color: white;
-        height: 900px;
-        width: 1200px;
         margin-top: 20px;
-
-
-
-    }
+       background-color: black;
+        width: 100%;  
+        max-width: 1200px;
+        margin-top: 20px auto;
+   }
 
     .main {
         display: flex;
         justify-content: center;
         
     }
+
+    .grid {
+        border: 2px blue solid;
+        display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         grid-template-rows:  3fr 2fr 1fr;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+         box-sizing: border-box; /* prevents padding from increasing the width */
+
+        
+    }
+
+    .img {
+    width: 100%;
+    height: 100%; /* Let each grid cell stretch to fill row height */
+}
+
+.img img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+#big {
+    height: 200px;
+}
+
+.img.one.big {
+  grid-column: 1;
+}
+
+.img.two.big {
+  grid-column: 2;
+}
+
+.img.three.big {
+  grid-column: 3;
+}
+
+.img.four.big {
+  grid-column: 4;
+}
+
+.img.fifteen.big {
+  grid-column: 5;
+}
+
+@media (max-width: 600px) {
+  .img.big {
+    height: 150px;
+  }
+}
+
+.img.big img {
+    height: 100%;
+}
+
+
+body {
+    background-color: #800080;
+    margin: 0;
+}
+
+.evil p {
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: Uncial-like;
+}
 
 
   </style>
@@ -75,9 +147,72 @@
 
 <div class="main">
 
+    
 <div class="white-background">
 
+    <div class="evil">
 
+        <p> My Favorite Rangers! </p>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="img one big">
+            <img src="./imgs/favrangers/evilwhitedinothunder.jpg">
+        </div>
+        <div class="img two big"> 
+            <img src="./imgs/favrangers/reddinothunder.jpg">
+        </div>
+        <div class="img three big">
+            <img src="./imgs/favrangers/redmystic.png">
+        </div>
+        <div class="img four big">
+            <img src="./imgs/favrangers/redninjastorm.jpg">
+        </div>
+        <div class="img fifteen big">
+            <img src="./imgs/favrangers/blackdinothunder.png">
+        </div>    
+
+
+        <div class="img five">
+            <img src="./imgs/favvillans/dai shi.jpg">
+        </div>    
+
+        <div class="img six">
+            <img src="./imgs/favvillans/koragg.jpg">
+        </div>
+        <div class="img seven">
+            <img src="./imgs/favvillans/mesagog.jpeg">
+        </div>
+        <div class="img eight">
+            <img src="/imgs/favvillans/whitedinothunder.jpeg">
+        </div>
+        <div class="img nine">
+            <img src="./imgs/favvillans/zeltrax.jpg">
+        </div>
+        <div class="img ten">
+            <img src="./imgs/other/alpha5.jpeg">
+        </div>
+        <div class="img eleven">
+            <img src="./imgs/other/hayley.png">
+        </div>
+        <div class="img twelve">
+            <img src="./imgs/other/orwgp6bzj2db1.webp">
+        </div>
+        <div class="img thirteen">
+            <img src="./imgs/other/solaris knight.jpg">
+        </div>
+        <div class="img fourteen">
+            <img src="./imgs/other/udonna.jpg">
+        </div>
+
+
+
+
+        </div>  
+
+    </div>
 
 
 </div>
